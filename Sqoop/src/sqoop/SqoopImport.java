@@ -1,4 +1,5 @@
 package sqoop;
+
 //Here I am using a table Persons, with columns PersonID and LastName
 import org.apache.sqoop.client.SqoopClient;
 import org.apache.sqoop.model.MConnection;
@@ -18,15 +19,15 @@ public class SqoopImport {
  public static void main(String[] args) {
    
    
-  String connectionString = "jdbc:mysql://10.31.0.25:3306/test";
-  String username = "abdadmin";
-  String password = "abdadmin123";
-  String schemaName = "test";
+  String connectionString = "jdbc:mysql://YourMysqlIP:3306/test";
+  String username = "YourMysqUserName";
+  String password = "YourMysqlPassword";
+  String schemaName = "YourMysqlDB";
   String tableName = "Persons";
   String columns = "PersonID,LastName"; //comma seperated column names
   String partitionColumn = "PersonID";
   String outputDirectory = "/output/Persons";
-  String url = "http://10.31.0.35:12000/sqoop/";
+  String url = "http://YourSqoopIP:12000/sqoop/";
  
    
   SqoopClient client = new SqoopClient(url);
@@ -45,7 +46,7 @@ public class SqoopImport {
   conForms.getStringInput("connection.username").setValue(username);
   conForms.getStringInput("connection.password").setValue(password);
  
- // frameworkForms.getIntegerInput("security.maxConnections").setValue(0);
+  //frameworkForms.getIntegerInput("security.maxConnections").setValue(0);
  
   Status status  = client.createConnection(newCon);
   if(status.canProceed()) {
