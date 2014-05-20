@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+extraProperties=sonar.host.url\=http\://10.30.60.243\:9000\r\nsonar.jdbc.password\=sonar_test\r\nsonar.jdbc.username\=sonar\r\nsonar.jdbc.url\=jdbc\:mysql\://10.30.60.225\:3306/sonar?useUnicode\=true&characterEncoding\=utf8\r\nsonar.login\=abdfdev\r\nsonar.password\=@mmA123
+projectKey=TwitterPos\:TwitterPos
+serverUrl=http\://localhost\:9000
+version=2
